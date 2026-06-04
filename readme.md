@@ -1,1 +1,1 @@
-Hello, Hexlet! How are you?
+Hello, Hexlet! How about me?
