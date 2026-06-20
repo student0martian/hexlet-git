@@ -1,0 +1,17 @@
+
+#  # Подключаем git-prompt
+#source /home/martian/git_branch_fast.sh
+#
+#  # Настройка внешнего вида: папка и ветка
+#export PS1="\W\$(__git_branch_fast) $ "
+
+  # Подключаем git-prompt
+source /home/martian/git_branch_fast.sh
+source /home/martian/prompt_status.sh
+
+  # \033[1;34m — включает жирный синий цвет для папки
+  # \033[0m — сбрасывает цвет перед выводом ветки
+#export PS1="\033[1;34m\W\033[0m\$(__git_branch_fast) $ "
+  # Собираем PS1: сначала статус (смайлик), затем синяя папка, ветка Git и знак $
+export PS1="\$(__prompt_status)\033[1;34m\W\033[0m\$(__git_branch_fast) $ "
+
